@@ -1,0 +1,109 @@
+.mainpage-grid {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd; }
+  @media (min-width: 768px) {
+    .mainpage-grid {
+      width: 730px; } }
+  @media (min-width: 992px) {
+    .mainpage-grid {
+      width: 970px; } }
+  @media (min-width: 1170px) {
+    .mainpage-grid {
+      width: 1200px; } }
+  .mainpage-grid__services-block {
+    border-bottom: 1px solid #dddddd;
+    padding: 0 15px;
+    margin: 0 -15px; }
+  .mainpage-grid__two-column-block {
+    border-bottom: 1px solid #dddddd;
+    padding: 0 15px;
+    margin: 0 -15px; }
+  .mainpage-grid__news-slider {
+    padding: 0 15px;
+    margin: 0 -15px; }
+  .mainpage-grid__inner {
+    padding: 35px 20px; }
+  .mainpage-grid__title {
+    color: #bb222b;
+    font-weight: 700;
+    font-size: 26px;
+    padding-bottom: 20px; }
+  .mainpage-grid__content {
+    font-weight: 300;
+    line-height: 1.3;
+    font-size: 16px; }
+  .mainpage-grid p {
+    padding-bottom: 20px; }
+  .mainpage-grid__readmore {
+    color: #bb222b;
+    text-decoration: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    position: relative; }
+    .mainpage-grid__readmore:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      border-bottom: 1px solid #bb222b;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+    .mainpage-grid__readmore:hover:after {
+      -webkit-transform: scale(0);
+              transform: scale(0); }
+  .mainpage-grid__info {
+    padding: 10px 0; }
+
+@media (max-width: 767px) {
+  .mainpage-grid__inner {
+    padding: 35px 5px; }
+  .mainpage-grid__info {
+    padding: 20px 0; } }
+.info {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .info__title {
+    padding-bottom: 10px;
+    font-weight: 400; }
+  .info__text {
+    font-weight: 300; }
+  .info__content {
+    /*display: inline-block;
+        vertical-align: middle;
+        width: 83%;
+        margin-left: 3%;*/ }
+  .info__img {
+    height: 70px;
+    min-width: 70px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; }
+    .info__img_cook {
+      background-image: url(images/cook-hat.png?c53a3d7e6d9435165b2e56813b98d66c); }
+    .info__img_tray {
+      background-image: url(images/tray-big.png?7a92a47de627f1d959056a933ffaa3a5); }
+    .info__img_waiter {
+      background-image: url(images/waiter.png?54fe0457f84907f98d1a38821a4780bd); }
+
+@media (max-width: 767px) {
+  .info__img {
+    height: 50px;
+    min-width: 50px; } }

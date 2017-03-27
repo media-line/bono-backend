@@ -1,0 +1,16 @@
+.detail-news__img {
+  border: 1px solid #dddddd;
+  margin-bottom: 30px; }
+  .detail-news__img img {
+    display: block;
+    width: 100%;
+    border: none;
+    margin-right: 0; }
+
+.detail-news__date {
+  color: #bb222b;
+  font-size: 14px;
+  padding-bottom: 10px; }
+
+.detail-news__text p {
+  padding-bottom: 25px; }

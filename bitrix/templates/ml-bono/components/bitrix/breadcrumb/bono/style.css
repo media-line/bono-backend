@@ -1,0 +1,38 @@
+.breadcrumbs {
+  text-align: center;
+  font-weight: 300; }
+  .breadcrumbs__link {
+    color: #989898;
+    text-decoration: none;
+    position: relative;
+    margin-right: 23px;
+    position: relative; }
+    .breadcrumbs__link:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      border-bottom: 1px solid #989898;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+    .breadcrumbs__link:hover:after {
+      -webkit-transform: scale(0);
+              transform: scale(0); }
+    .breadcrumbs__link:before {
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\E901";
+      position: absolute;
+      right: -20px;
+      font-size: 13px;
+      top: 5px; }

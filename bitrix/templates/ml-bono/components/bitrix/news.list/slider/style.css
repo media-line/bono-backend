@@ -1,0 +1,88 @@
+.slider .slick-slide {
+  outline: none;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd; }
+  .slider .slick-slide img {
+    width: 100%; }
+
+.slider .slick-dots li {
+  margin: 0;
+  margin-right: 5px; }
+  .slider .slick-dots li button {
+    border: 3px solid #bb222b;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    display: inline-block; }
+    .slider .slick-dots li button:hover {
+      background-color: #bb222b; }
+    .slider .slick-dots li button:before {
+      content: none; }
+  .slider .slick-dots li.slick-active button {
+    background-color: #bb222b;
+    width: 15px;
+    height: 15px; }
+
+.slider__dot {
+  border: 3px solid #bb222b;
+  background-color: transparent;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: inline-block;
+  margin-left: 7px;
+  cursor: pointer; }
+  .slider__dot:hover {
+    background-color: #bb222b; }
+  .slider__dot_active {
+    background-color: #bb222b; }
+
+.slider__dots {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 100%;
+  box-sizing: border-box; }
+  @media (min-width: 768px) {
+    .slider__dots {
+      width: 730px; } }
+  @media (min-width: 992px) {
+    .slider__dots {
+      width: 970px; } }
+  @media (min-width: 1170px) {
+    .slider__dots {
+      width: 1200px; } }
+
+.slider__dots-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.slider__dots-inner {
+  position: absolute;
+  bottom: 50px; }
+
+.slider__slide {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative; }
+
+@media (max-width: 991px) {
+  .slider__dots-inner {
+    bottom: 20px; } }
+
+@media (max-width: 767px) {
+  .slider {
+    display: none !important; } }

@@ -1,6 +1,12 @@
 <?
 $arUrlRewrite = array(
 	array(
+		"CONDITION" => "#^/kontakty/portfolio/#",
+		"RULE" => "",
+		"ID" => "bitrix:photogallery",
+		"PATH" => "/kontakty/portfolio/index.php",
+	),
+	array(
 		"CONDITION" => "#^/sotrudniki/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",

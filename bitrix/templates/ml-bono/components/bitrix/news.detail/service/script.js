@@ -1,12 +1,12 @@
 webpackJsonp([0],{
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(38);
+__webpack_require__(39);
 
 __webpack_require__(19);
 
@@ -22,7 +22,7 @@ __webpack_require__(25);
 
 __webpack_require__(20);
 
-__webpack_require__(9);
+__webpack_require__(10);
 
 /***/ }),
 
@@ -32,15 +32,15 @@ __webpack_require__(9);
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(79);
+__webpack_require__(80);
 
-__webpack_require__(12);
+__webpack_require__(7);
 
-var _slickCarousel = __webpack_require__(8);
+var _slickCarousel = __webpack_require__(9);
 
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
-__webpack_require__(7);
+__webpack_require__(8);
 
 __webpack_require__(13);
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
 "use strict";
 
 
-__webpack_require__(80);
+__webpack_require__(81);
 
 /***/ }),
 
@@ -89,7 +89,7 @@ __webpack_require__(80);
 "use strict";
 
 
-__webpack_require__(85);
+__webpack_require__(86);
 
 __webpack_require__(5);
 
@@ -101,7 +101,7 @@ __webpack_require__(5);
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(86);
+__webpack_require__(87);
 
 var $modalButton = '.modal__app-button';
 var $modal = '.modal';
@@ -146,33 +146,26 @@ $(document).ready(function () {
 "use strict";
 
 
-__webpack_require__(94);
+__webpack_require__(95);
 
-__webpack_require__(68);
+__webpack_require__(69);
 
 /***/ }),
 
-/***/ 38:
+/***/ 39:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(93);
-
-/***/ }),
-
-/***/ 79:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+__webpack_require__(94);
 
 /***/ }),
 
@@ -183,7 +176,7 @@ __webpack_require__(93);
 
 /***/ }),
 
-/***/ 85:
+/***/ 81:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -197,7 +190,7 @@ __webpack_require__(93);
 
 /***/ }),
 
-/***/ 93:
+/***/ 87:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -209,6 +202,13 @@ __webpack_require__(93);
 
 // removed by extract-text-webpack-plugin
 
+/***/ }),
+
+/***/ 95:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
 /***/ })
 
-},[112]);
+},[114]);

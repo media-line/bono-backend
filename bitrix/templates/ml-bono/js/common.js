@@ -32,7 +32,7 @@
 
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		31: 0
+/******/ 		32: 0
 /******/ 	};
 
 /******/ 	// The require function
@@ -154,19 +154,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.promiseHeaderHeightResize = exports.promiseHeaderHeight = undefined;
 
-__webpack_require__(77);
+__webpack_require__(78);
 
-__webpack_require__(66);
+__webpack_require__(67);
 
-__webpack_require__(11);
+__webpack_require__(12);
 
-__webpack_require__(63);
+__webpack_require__(64);
 
 var $header = '.header';
 
 var headerHeight = '';
 var promiseHeaderHeight = '';
 var promiseHeaderHeightResize = '';
+
+var resizeTimer = void 0;
 
 function setHeaderHeight($header, headerHeight) {
     return new Promise(function (resolve) {
@@ -178,8 +180,12 @@ function setHeaderHeight($header, headerHeight) {
 $(window).on('load', function () {
     exports.promiseHeaderHeight = promiseHeaderHeight = setHeaderHeight($header, headerHeight);
 
-    $(window).resize(function () {
-        exports.promiseHeaderHeightResize = promiseHeaderHeightResize = setHeaderHeight($header, headerHeight);
+    $(window).resize(function (e) {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function () {
+            exports.promiseHeaderHeightResize = promiseHeaderHeightResize = setHeaderHeight($header, headerHeight);
+        }, 250);
     });
 });
 
@@ -194,7 +200,7 @@ exports.promiseHeaderHeightResize = promiseHeaderHeightResize;
 "use strict";
 
 
-__webpack_require__(75);
+__webpack_require__(76);
 
 /***/ }),
 /* 2 */
@@ -10442,7 +10448,7 @@ return jQuery;
 "use strict";
 
 
-__webpack_require__(70);
+__webpack_require__(71);
 
 /***/ }),
 /* 6 */
@@ -10451,16 +10457,25 @@ __webpack_require__(70);
 "use strict";
 
 
-__webpack_require__(96);
+__webpack_require__(97);
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(79);
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -13361,30 +13376,21 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(76);
-
-__webpack_require__(64);
-
-__webpack_require__(69);
-
-__webpack_require__(67);
-
-__webpack_require__(5);
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(92);
+__webpack_require__(77);
+
+__webpack_require__(65);
+
+__webpack_require__(70);
+
+__webpack_require__(68);
+
+__webpack_require__(5);
 
 /***/ }),
 /* 11 */
@@ -13393,7 +13399,7 @@ __webpack_require__(92);
 "use strict";
 
 
-__webpack_require__(72);
+__webpack_require__(93);
 
 /***/ }),
 /* 12 */
@@ -13402,7 +13408,7 @@ __webpack_require__(72);
 "use strict";
 
 
-__webpack_require__(78);
+__webpack_require__(73);
 
 /***/ }),
 /* 13 */
@@ -13460,57 +13466,52 @@ __webpack_require__(78);
 /* 60 */,
 /* 61 */,
 /* 62 */,
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(71);
-
-/***/ }),
+/* 63 */,
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(74);
+__webpack_require__(72);
 
 /***/ }),
-/* 65 */,
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(83);
+__webpack_require__(75);
 
 /***/ }),
+/* 66 */,
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(90);
+__webpack_require__(84);
 
 /***/ }),
-/* 68 */,
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(95);
+__webpack_require__(91);
 
 /***/ }),
+/* 69 */,
 /* 70 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(96);
 
 /***/ }),
 /* 71 */
@@ -13525,13 +13526,13 @@ __webpack_require__(95);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 73 */,
-/* 74 */
+/* 73 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 74 */,
 /* 75 */
 /***/ (function(module, exports) {
 
@@ -13556,44 +13557,50 @@ __webpack_require__(95);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */
+/* 79 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 84 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 85 */,
 /* 86 */,
 /* 87 */,
 /* 88 */,
 /* 89 */,
-/* 90 */
+/* 90 */,
+/* 91 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 91 */,
-/* 92 */
+/* 92 */,
+/* 93 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

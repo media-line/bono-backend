@@ -1,18 +1,18 @@
 webpackJsonp([20],{
 
-/***/ 114:
+/***/ 116:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(40);
+__webpack_require__(41);
 
-var _slickCarousel = __webpack_require__(8);
+var _slickCarousel = __webpack_require__(9);
 
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
-__webpack_require__(7);
+__webpack_require__(8);
 
 var _header = __webpack_require__(0);
 
@@ -23,6 +23,8 @@ var $slide = '.slider__slide';
 var $dots = '.slider__dots';
 var $dot = '.slider__dot';
 var dotActive = 'slider__dot_active';
+
+var resizeTimer = void 0;
 
 function setSlide(active) {
     $($slider).slick('slickGoTo', active);
@@ -62,23 +64,27 @@ $(window).on('load', function () {
         $($slider).slick('reinit');
     });
 
-    $(window).resize(function () {
-        _header.promiseHeaderHeightResize.then(function (result) {
-            $($slide).height($(window).outerHeight() - result);
-            $($dots).height($(window).outerHeight() - result);
-            $($slider).slick('reinit');
-        });
+    $(window).resize(function (e) {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function () {
+            _header.promiseHeaderHeightResize.then(function (result) {
+                $($slide).height($(window).outerHeight() - result);
+                $($dots).height($(window).outerHeight() - result);
+                $($slider).slick('reinit');
+            });
+        }, 250);
     });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 
-/***/ 40:
+/***/ 41:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
 
-},[114]);
+},[116]);

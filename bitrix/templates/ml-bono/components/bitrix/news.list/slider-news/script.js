@@ -1,20 +1,20 @@
 webpackJsonp([23],{
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(35);
+__webpack_require__(36);
 
-__webpack_require__(10);
+__webpack_require__(11);
 
-var _slickCarousel = __webpack_require__(8);
+var _slickCarousel = __webpack_require__(9);
 
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
-__webpack_require__(7);
+__webpack_require__(8);
 
 __webpack_require__(13);
 
@@ -47,11 +47,11 @@ $(document).ready(function () {
 
 /***/ }),
 
-/***/ 35:
+/***/ 36:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
 
-},[109]);
+},[111]);

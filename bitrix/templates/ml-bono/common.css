@@ -864,9 +864,12 @@
 
 .form .two-column-grid__column {
   padding-bottom: 0; }
+
+.form .form-required {
+  color: #bb222b; }
 .field {
   border-radius: 2px;
-  border: 1px solid #989898;
+  border: 1px solid #dddddd;
   height: 35px;
   background-color: #f1f1f1;
   width: 100%;
@@ -881,7 +884,7 @@
     border: 1px solid #bb222b; }
 .textarea {
   border-radius: 2px;
-  border: 1px solid #989898;
+  border: 1px solid #dddddd;
   height: 105px;
   background-color: #f1f1f1;
   width: 100%;
@@ -898,7 +901,7 @@
     border: 1px solid #bb222b; }
 .select {
   border-radius: 2px;
-  border: 1px solid #989898;
+  border: 1px solid #dddddd;
   height: 35px;
   background-color: #f1f1f1;
   width: 100%;

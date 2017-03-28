@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 101:
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8,13 +8,13 @@ webpackJsonp([8],{
 
 __webpack_require__(27);
 
-var _scriptjs = __webpack_require__(62);
+var _scriptjs = __webpack_require__(63);
 
 var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
-__webpack_require__(11);
+__webpack_require__(12);
 
-__webpack_require__(9);
+__webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 balloonContent: '220980 г.Минск ул. Машиностроителей 30 офис 564'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'images/marker.png',
+                iconImageHref: '/images/marker.png',
                 iconImageSize: [40, 60],
                 iconImageOffset: [-20, -60]
             });
@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 /***/ }),
 
-/***/ 62:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -194,4 +194,4 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ })
 
-},[101]);
+},[102]);

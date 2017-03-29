@@ -1,6 +1,18 @@
 <?
 $arUrlRewrite = array(
 	array(
+		"CONDITION" => "#^/uslugi/keytering/([0-9a-zA-Z-]+)/.*#",
+		"RULE" => "ELEMENT_CODE=\$1",
+		"ID" => "",
+		"PATH" => "/uslugi/keytering/meropriyatiya/index.php",
+	),
+	array(
+		"CONDITION" => "#^/o-kompanii/portfolio/#",
+		"RULE" => "",
+		"ID" => "bitrix:photogallery",
+		"PATH" => "/o-kompanii/portfolio/index.php",
+	),
+	array(
 		"CONDITION" => "#^/kontakty/portfolio/#",
 		"RULE" => "",
 		"ID" => "bitrix:photogallery",

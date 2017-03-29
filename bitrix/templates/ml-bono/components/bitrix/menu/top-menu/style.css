@@ -10,17 +10,48 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-left: 5px; }
-  .top-menu__element:hover .top-menu__link:before {
-    border: 3px solid #bb222b; }
-  .top-menu__element:hover + .top-menu__element .top-menu__link:before {
-    border: 3px solid #bb222b; }
+  .top-menu__element {
+    position: relative; }
+    .top-menu__element:hover .top-menu__link:before {
+      border: 3px solid #bb222b; }
+    .top-menu__element:hover .top-menu__link + .top-menu__inner {
+      opacity: 1;
+      visibility: visible; }
+    .top-menu__element:hover + .top-menu__element .top-menu__link:before {
+      border: 3px solid #bb222b; }
+    .top-menu__element_parent .top-menu__link:after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 100%;
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -10px;
+      background-color: #ffffff;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+    .top-menu__element_parent:hover .top-menu__link {
+      box-shadow: 0 3px 8px #dbdbdb; }
+      .top-menu__element_parent:hover .top-menu__link:before {
+        border: 3px solid #000000; }
+      .top-menu__element_parent:hover .top-menu__link:after {
+        opacity: 1;
+        visibility: visible; }
+    .top-menu__element_parent:hover + .top-menu__element .top-menu__link:before {
+      border: 3px solid #000000; }
   .top-menu__link {
-    padding: 20px 29px;
+    padding: 20px 15px;
     display: inline-block;
     text-decoration: none;
     color: #000000;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+    margin: 0 7px;
+    transition: 0.2s;
+    z-index: 1;
     position: relative; }
     .top-menu__link:hover {
       color: #bb222b; }
@@ -28,7 +59,7 @@
       content: '';
       position: absolute;
       top: 27px;
-      left: -5px;
+      left: -17px;
       border-radius: 100%;
       border: 3px solid #000000;
       -webkit-transition: 0.2s;
@@ -66,18 +97,46 @@
       .top-menu__menu-button_active .top-menu__line:nth-child(3) {
         -webkit-transform: translate(0, -7px) rotate(45deg) scalex(1.5);
                 transform: translate(0, -7px) rotate(45deg) scalex(1.5); }
+  .top-menu__inner {
+    position: absolute;
+    width: 250px;
+    background-color: white;
+    padding: 10px 7px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    left: 7px;
+    top: 100%;
+    box-shadow: 0 0 15px #dbdbdb; }
+  .top-menu__inner-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    box-sizing: border-box; }
+    .top-menu__inner-link:hover {
+      border: 1px solid #bb222b;
+      color: #bb222b; }
 
 @media (max-width: 1199px) {
   .top-menu {
-    font-size: 17px; }
+    font-size: 16px; }
     .top-menu__link {
-      padding: 20px 14px; }
+      padding: 20px 10px; }
       .top-menu__link:before {
-        top: 26px; } }
+        top: 25px;
+        left: -10px; } }
 
 @media (max-width: 991px) {
   .top-menu {
-    font-size: 16px; }
+    font-size: 15px; }
     .top-menu__menu {
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
@@ -96,7 +155,8 @@
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      padding: 20px 8px; }
       .top-menu__link:before {
         top: 33px; } }
 
@@ -109,6 +169,18 @@
       width: 100%;
       display: block;
       text-align: center; }
+      .top-menu__element_parent:hover .top-menu__link {
+        box-shadow: none;
+        background-color: #ffffff;
+        color: #000000; }
+        .top-menu__element_parent:hover .top-menu__link:before {
+          border: 3px solid transparent; }
+        .top-menu__element_parent:hover .top-menu__link:after {
+          opacity: 0;
+          visibility: hidden; }
+      .top-menu__element_active .top-menu__link {
+        background-color: #bb222b !important;
+        color: #ffffff !important; }
     .top-menu__link {
       display: block;
       padding: 14px 0; }
@@ -116,4 +188,12 @@
         content: none; }
       .top-menu__link:active, .top-menu__link:focus {
         background-color: #bb222b;
-        color: #ffffff; } }
+        color: #ffffff; }
+    .top-menu__inner {
+      position: static;
+      width: auto;
+      box-sizing: border-box;
+      display: none;
+      margin: 0 7px;
+      visibility: visible;
+      opacity: 1; } }

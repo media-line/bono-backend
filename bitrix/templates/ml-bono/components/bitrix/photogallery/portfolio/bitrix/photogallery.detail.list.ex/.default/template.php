@@ -1,4 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+
+$GLOBALS['APPLICATION']->AddHeadScript(SITE_TEMPLATE_PATH.'/components/bitrix/photogallery/portfolio/bitrix/photogallery.detail.list.ex/.default/detailPortfolio.js');
+
 if (empty($arResult["ELEMENTS_LIST"]))
 	return true;
 
@@ -70,15 +73,20 @@ $current_date = "";
 if($_REQUEST['get_elements_html']){ob_start();}?>
 
 <div class="detail-portfolio">
-	<a href="/" class="img-block detail-portfolio__img-block">
-		<div class="img-block__cover detail-portfolio__cover">
-			<div class="img-block__img" style="background-image: url('/images/food2.jpg');">
+	<?php foreach ($arResult["ELEMENTS_LIST"] as $key => $arItem) { ?>
+		<? $prev = CFile::ResizeImageGet( $arItem['~DETAIL_PICTURE'], array( "width" => 500, "height" => 500 ), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
+		<? $full = CFile::ResizeImageGet( $arItem['~DETAIL_PICTURE'], array( "width" => 1920, "height" => 1024), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
 
+		<a href="<?php echo $full['src']; ?>" class="img-block detail-portfolio__img-block" data-fancybox="gallery">
+			<div class="img-block__cover detail-portfolio__cover">
+				<div class="img-block__img" style="background-image: url('<?php echo $prev['src']; ?>');">
+
+				</div>
+
+				<div class="img-block__hover"></div>
 			</div>
-
-			<div class="img-block__hover"></div>
-		</div>
-	</a>
+		</a>
+	<?php } ?>
 </div>
 
 <? foreach ($arResult["ELEMENTS_LIST"] as $key => $arItem)

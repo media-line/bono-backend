@@ -1,12 +1,12 @@
-webpackJsonp([20],{
+webpackJsonp([22],{
 
-/***/ 116:
+/***/ 120:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(41);
+__webpack_require__(42);
 
 var _slickCarousel = __webpack_require__(9);
 
@@ -80,11 +80,11 @@ $(window).on('load', function () {
 
 /***/ }),
 
-/***/ 41:
+/***/ 42:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
 
-},[116]);
+},[120]);

@@ -15,11 +15,11 @@ foreach($arResult as $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li class="top-menu__element"><a href="<?=$arItem["LINK"]?>" class="top-menu__link"><?=$arItem["TEXT"]?></a>
-				<ul>
+			<li class="top-menu__element top-menu__element_parent"><span class="top-menu__link top-menu__link_disable"><?=$arItem["TEXT"]?></span>
+				<ul class="top-menu__inner">
 		<?else:?>
-			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></a>
-				<ul>
+			<li class="top-menu__inner-element top-menu__inner-element_parent item-selected"><span class="top-menu__inner-link"><?=$arItem["TEXT"]?></span>
+				<ul class="top-menu__inner">
 		<?endif?>
 
 	<?else:?>
@@ -27,9 +27,9 @@ foreach($arResult as $arItem):?>
 		<?if ($arItem["PERMISSION"] > "D"):?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li  class="top-menu__element"><a href="<?=$arItem["LINK"]?>" class="top-menu__link"><?=$arItem["TEXT"]?></a></li>
+				<li class="top-menu__element"><a href="<?=$arItem["LINK"]?>" class="top-menu__link"><?=$arItem["TEXT"]?></a></li>
 			<?else:?>
-				<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+				<li class="top-menu__inner-element"><a href="<?=$arItem["LINK"]?>" class="top-menu__inner-link"><?=$arItem["TEXT"]?></a></li>
 			<?endif?>
 
 		<?else:?>

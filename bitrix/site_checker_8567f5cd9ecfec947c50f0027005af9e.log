@@ -1,4 +1,170 @@
-2017-Mar-28 09:46:37 Наличие необходимых модулей php (check_php_modules): Ok
+2017-Mar-29 10:09:49 Наличие необходимых модулей php (check_php_modules): Ok
 Все необходимые модули установлены
-2017-Mar-28 09:46:37 Обязательные параметры PHP (check_php_settings): Fail
+2017-Mar-29 10:09:49 Обязательные параметры PHP (check_php_settings): Fail
 Ошибка! Значение max_input_vars должно быть не ниже 10000. Текущее значение: 1000
+2017-Mar-29 10:09:49 Модули веб-сервера (check_security): Ok
+Конфликтов не выявлено
+2017-Mar-29 10:09:50 Значения переменных сервера (check_server_vars): Fail
+Ошибка! Текущий домен не валидный (bono-backend). Может содержать только цифры, латинские буквы и дефис. Должен содержать точку.
+2017-Mar-29 10:09:50 Сохранение сессии (check_session): Ok
+50% done
+2017-Mar-29 10:09:50 Сохранение сессии (check_session): Ok
+Успешно
+2017-Mar-29 10:09:50 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+Правильные. Сайт работает в UTF кодировке
+2017-Mar-29 10:09:51 Служебные скрипты в корне сайта (check_install_scripts): Ok
+Отсутствуют
+2017-Mar-29 10:09:51 Работа с сокетами (check_socket): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:51 Параметры подключения к базе данных (check_dbconn_settings): Ok
+Успешно
+2017-Mar-29 10:09:52 Лишний вывод в файлах конфигурации (check_dbconn): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:52 Выполнение агентов на cron (check_bx_crontab): Warning
+Замечание. Агенты выполняются на хитах, рекомендуется перевести выполнение агентов на cron
+2017-Mar-29 10:09:52 Сохранение сессии без UserAgent (check_session_ua): Ok
+50% done
+Connection to bono-backend:80	Success
+
+2017-Mar-29 10:09:52 Сохранение сессии без UserAgent (check_session_ua): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:53 Настройки сайтов (check_sites): Ok
+Правильные
+2017-Mar-29 10:09:53 Передача объектов по ссылке (check_clone): Ok
+Успешно
+2017-Mar-29 10:09:53 Размер стека и pcre.recursion_limit (check_pcre_recursion): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:54 Вызов method_exists на строке (check_method_exists): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:54 Загрузка файла (check_upload): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:55 Загрузка файла больше 4Мб (check_upload_big): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:55 Загрузка файла через php://input (check_upload_raw): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:09:55 Передача POST запроса с большим числом параметров (check_post): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:10:01 Отправка почты (check_mail): Fail
+Ошибка! Отправлено. Время отправки: 5.59 сек.
+2017-Mar-29 10:10:02 Отправка почтового сообщения больше 64Кб (check_mail_big): Ok
+Успешно
+2017-Mar-29 10:10:02 Проверка на наличие неотправленных сообщений (check_mail_b_event): Ok
+Успешно
+2017-Mar-29 10:10:03 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+50% done
+Connection to bono-backend:80	Success
+
+2017-Mar-29 10:10:03 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:10:03 Фактическое ограничение памяти (check_memory_limit): Ok
+20% done
+Connection to bono-backend:80	Success
+
+2017-Mar-29 10:10:04 Фактическое ограничение памяти (check_memory_limit): Ok
+40% done
+Connection to bono-backend:80	Success
+
+2017-Mar-29 10:10:04 Фактическое ограничение памяти (check_memory_limit): Ok
+60% done
+Connection to bono-backend:80	Success
+
+2017-Mar-29 10:10:04 Фактическое ограничение памяти (check_memory_limit): Ok
+80% done
+Connection to bono-backend:80	Success
+
+2017-Mar-29 10:10:05 Фактическое ограничение памяти (check_memory_limit): Ok
+Connection to bono-backend:80	Success
+
+Не менее 256 М
+2017-Mar-29 10:10:05 Работа с файлами кеша (check_cache): Ok
+Успешно
+2017-Mar-29 10:10:06 Доступ к серверу обновлений (check_update): Ok
+Успешно
+2017-Mar-29 10:10:06 HTTP авторизация (check_http_auth): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:10:07 Создание и запуск файла (check_exec): Ok
+Connection to bono-backend:80	Success
+
+Успешно
+2017-Mar-29 10:10:07 Функция getimagesize для swf (check_getimagesize): Ok
+Успешно
+2017-Mar-29 10:10:08 Версия MySQL-сервера (check_mysql_bug_version): Ok
+Успешно
+2017-Mar-29 10:10:09 Время на БД и веб-сервере (check_mysql_time): Fail
+Ошибка! Время отличается на 3600 секунд
+2017-Mar-29 10:10:09 Режим работы MySQL (check_mysql_mode): Ok
+Успешно
+2017-Mar-29 10:10:09 Кодировка соединения (check_mysql_connection_charset): Ok
+character_set_connection=utf8, collation_connection=utf8_unicode_ci, character_set_results=utf8
+Успешно
+2017-Mar-29 10:10:09 Кодировка базы данных (check_mysql_db_charset): Ok
+CHARSET=utf8, COLLATION=utf8_unicode_ci
+Успешно
+2017-Mar-29 10:10:19 Кодировки таблиц в БД (check_mysql_table_charset): Ok
+Успешно
+2017-Mar-29 10:10:19 Структура базы данных (check_mysql_table_structure): Ok
+0% done
+2017-Mar-29 10:10:20 Структура базы данных (check_mysql_table_structure): Ok
+4% done
+2017-Mar-29 10:10:21 Структура базы данных (check_mysql_table_structure): Ok
+9% done
+2017-Mar-29 10:10:21 Структура базы данных (check_mysql_table_structure): Ok
+14% done
+2017-Mar-29 10:10:22 Структура базы данных (check_mysql_table_structure): Ok
+19% done
+2017-Mar-29 10:10:22 Структура базы данных (check_mysql_table_structure): Ok
+23% done
+2017-Mar-29 10:10:24 Структура базы данных (check_mysql_table_structure): Ok
+28% done
+2017-Mar-29 10:10:24 Структура базы данных (check_mysql_table_structure): Ok
+33% done
+2017-Mar-29 10:10:26 Структура базы данных (check_mysql_table_structure): Ok
+38% done
+2017-Mar-29 10:10:31 Структура базы данных (check_mysql_table_structure): Ok
+42% done
+2017-Mar-29 10:10:31 Структура базы данных (check_mysql_table_structure): Ok
+47% done
+2017-Mar-29 10:10:32 Структура базы данных (check_mysql_table_structure): Ok
+52% done
+2017-Mar-29 10:10:32 Структура базы данных (check_mysql_table_structure): Ok
+57% done
+2017-Mar-29 10:10:32 Структура базы данных (check_mysql_table_structure): Ok
+61% done
+2017-Mar-29 10:10:33 Структура базы данных (check_mysql_table_structure): Ok
+66% done
+2017-Mar-29 10:10:34 Структура базы данных (check_mysql_table_structure): Ok
+71% done
+2017-Mar-29 10:10:34 Структура базы данных (check_mysql_table_structure): Ok
+76% done
+2017-Mar-29 10:10:35 Структура базы данных (check_mysql_table_structure): Ok
+80% done
+2017-Mar-29 10:10:35 Структура базы данных (check_mysql_table_structure): Ok
+85% done
+2017-Mar-29 10:10:36 Структура базы данных (check_mysql_table_structure): Ok
+90% done
+2017-Mar-29 10:10:36 Структура базы данных (check_mysql_table_structure): Ok
+95% done
+2017-Mar-29 10:10:36 Структура базы данных (check_mysql_table_structure): Ok
+Успешно

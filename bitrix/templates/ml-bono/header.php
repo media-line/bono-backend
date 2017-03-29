@@ -73,17 +73,22 @@ if ($APPLICATION->GetCurPage(false) === '/') {
 
             <div class="header__row header__row_second">
                 <div class="header__top-menu-block">
-                <?$APPLICATION->IncludeComponent("bitrix:menu", "top-menu", Array(
-	"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"MAX_LEVEL" => "1",	// Уровень вложенности меню
-		"CHILD_MENU_TYPE" => "top",	// Тип меню для остальных уровней
-		"USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"ALLOW_MULTI_SELECT" => "Y",	// Разрешить несколько активных пунктов одновременно
-		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top-menu", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "Y",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "top-menu"
 	),
 	false
 );?>

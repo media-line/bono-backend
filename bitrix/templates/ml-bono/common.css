@@ -382,7 +382,9 @@
     padding: 0 15px;
     text-align: center; }
   .header__menu-button {
-    display: block; } }
+    display: block; }
+  .header__top-menu-block {
+    padding-left: 15px; } }
 .logo img {
   max-width: 100%; }
 .contact {

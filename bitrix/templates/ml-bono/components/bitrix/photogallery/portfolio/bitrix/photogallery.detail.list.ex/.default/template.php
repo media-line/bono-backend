@@ -72,7 +72,14 @@ $current_date = "";
 <?/* Used to show 'More photos' in js*/
 if($_REQUEST['get_elements_html']){ob_start();}?>
 
-<div class="detail-portfolio">
+<?php
+$oneRow = false;
+if (count($arResult["SECTIONS"]) < 4) {
+	$oneRow = true;
+}
+?>
+
+<div class="detail-portfolio<?php if ($oneRow) { echo ' detail-portfolio_one-row' ;} ?>">
 	<?php foreach ($arResult["ELEMENTS_LIST"] as $key => $arItem) { ?>
 		<? $prev = CFile::ResizeImageGet( $arItem['~DETAIL_PICTURE'], array( "width" => 500, "height" => 500 ), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
 		<? $full = CFile::ResizeImageGet( $arItem['~DETAIL_PICTURE'], array( "width" => 1920, "height" => 1024), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>

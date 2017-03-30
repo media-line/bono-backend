@@ -1,6 +1,12 @@
 <?
 $arUrlRewrite = array(
 	array(
+		"CONDITION" => "#^/uslugi/arenda-oborudovaniya/([0-9a-zA-Z-]+)/.*#",
+		"RULE" => "SECTION_CODE=\$1",
+		"ID" => "",
+		"PATH" => "/uslugi/arenda-oborudovaniya/oborudovanie/index.php",
+	),
+	array(
 		"CONDITION" => "#^/uslugi/keytering/([0-9a-zA-Z-]+)/.*#",
 		"RULE" => "ELEMENT_CODE=\$1",
 		"ID" => "",

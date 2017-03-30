@@ -43,7 +43,14 @@ endif;
 return false;
 endif;?>
 
-<div class="list-portfolio">
+<?php
+$oneRow = false;
+if (count($arResult["SECTIONS"]) < 4) {
+	$oneRow = true;
+}
+?>
+
+<div class="list-portfolio<?php if ($oneRow) { echo ' list-portfolio_one-row' ;} ?>">
 	<?foreach($arResult["SECTIONS"] as $res):?>
 		<? $img = CFile::ResizeImageGet( $res['PICTURE']['ID'], array( "width" => 400, "height" => 400 ), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
 

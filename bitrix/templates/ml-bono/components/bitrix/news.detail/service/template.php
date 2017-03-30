@@ -235,23 +235,129 @@ $img = CFile::ResizeImageGet( $arResult['DETAIL_PICTURE']['ID'], array( "width" 
 		</div>
 	<?php } ?>
 
-	<div class="service-detail__title service-detail__title_padding">
-		Наши реализованные проекты по обслуживанию столовых и кафе:
-	</div>
+	<?php if ($arResult['PROPERTIES']['PROJECT']['VALUE'][0]) { ?>
+		<div class="service-detail__title service-detail__title_padding">
+			<?php echo $arResult['PROPERTIES']['PROJECT_NAME']['VALUE']; ?>
+		</div>
 
-	<div class="img-blocks img-blocks_slider">
-		<a href="/" class="img-block img-blocks__img-block" data-fancybox="gallery">
-			<div class="img-block__cover">
-				<div class="img-block__img" style="background-image: url('/images/cafe1.jpg');">
+		<div class="img-blocks img-blocks_slider">
+			<?php foreach ($arResult['PROPERTIES']['PROJECT']['FULL'] as $project) { ?>
+				<? $prev = CFile::ResizeImageGet( $project->fields['DETAIL_PICTURE'], array( "width" => 500, "height" => 500 ), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
+				<? $full = CFile::ResizeImageGet( $project->fields['DETAIL_PICTURE'], array( "width" => 1920, "height" => 1024), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
 
-				</div>
+				<a href="<?php echo $full['src']; ?>" class="img-block img-blocks__img-block" data-fancybox="gallery">
+					<div class="img-block__cover">
+						<div class="img-block__img" style="background-image: url('<?php echo $prev['src']; ?>');">
 
-				<div class="img-block__hover"></div>
-			</div>
+						</div>
 
-			<div class="img-block__text">
-				Кафе Гостиница
-			</div>
-		</a>
-	</div>
+						<div class="img-block__hover"></div>
+					</div>
+
+					<div class="img-block__text">
+						<?php echo $project->fields['NAME']; ?>
+					</div>
+				</a>
+			<?php } ?>
+		</div>
+	<?php } ?>
+
+	<?php if ($arResult['PROPERTIES']['LEASE']['VALUE'][0]) { ?>
+		<div class="img-blocks">
+			<?php foreach ($arResult['PROPERTIES']['LEASE']['FULL'] as $category) { ?>
+				<? $img = CFile::ResizeImageGet( $category->fields['PICTURE'], array( "width" => 500, "height" => 500 ), BX_RESIZE_IMAGE_EXACT, true, array() ); ?>
+
+				<a href="<?php echo $category->fields['SECTION_PAGE_URL']; ?>" class="img-block img-blocks__img-block">
+					<div class="img-block__cover">
+						<div class="img-block__img" style="background-image: url('<?php echo $img['src']; ?>');">
+
+						</div>
+
+						<div class="img-block__hover"></div>
+					</div>
+
+					<div class="img-block__text">
+						<?php echo $category->fields['NAME']; ?>
+					</div>
+				</a>
+			<?php } ?>
+		</div>
+	<?php } ?>
 </div>
+
+<!-- закрывает .page-inner__content -->
+</div>
+
+<div class="page-inner__module">
+	<section class="services">
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:news.list",
+			"services",
+			array(
+				"DISPLAY_DATE" => "N",
+				"DISPLAY_NAME" => "Y",
+				"DISPLAY_PICTURE" => "Y",
+				"DISPLAY_PREVIEW_TEXT" => "Y",
+				"AJAX_MODE" => "N",
+				"IBLOCK_TYPE" => "services",
+				"IBLOCK_ID" => "4",
+				"NEWS_COUNT" => "4",
+				"SORT_BY1" => "SORT",
+				"SORT_ORDER1" => "ASC",
+				"SORT_BY2" => "SORT",
+				"SORT_ORDER2" => "ASC",
+				"FILTER_NAME" => "",
+				"FIELD_CODE" => array(
+					0 => "",
+					1 => "",
+				),
+				"PROPERTY_CODE" => array(
+					0 => "",
+					1 => "DESCRIPTION",
+					2 => "",
+				),
+				"CHECK_DATES" => "Y",
+				"DETAIL_URL" => "",
+				"PREVIEW_TRUNCATE_LEN" => "",
+				"ACTIVE_DATE_FORMAT" => "d.m.Y",
+				"SET_TITLE" => "N",
+				"SET_BROWSER_TITLE" => "N",
+				"SET_META_KEYWORDS" => "N",
+				"SET_META_DESCRIPTION" => "N",
+				"SET_LAST_MODIFIED" => "N",
+				"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+				"ADD_SECTIONS_CHAIN" => "N",
+				"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+				"PARENT_SECTION" => "",
+				"PARENT_SECTION_CODE" => "",
+				"INCLUDE_SUBSECTIONS" => "N",
+				"CACHE_TYPE" => "A",
+				"CACHE_TIME" => "3600",
+				"CACHE_FILTER" => "Y",
+				"CACHE_GROUPS" => "Y",
+				"DISPLAY_TOP_PAGER" => "N",
+				"DISPLAY_BOTTOM_PAGER" => "N",
+				"PAGER_TITLE" => "Новости",
+				"PAGER_SHOW_ALWAYS" => "N",
+				"PAGER_TEMPLATE" => "",
+				"PAGER_DESC_NUMBERING" => "N",
+				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+				"PAGER_SHOW_ALL" => "N",
+				"PAGER_BASE_LINK_ENABLE" => "N",
+				"SET_STATUS_404" => "N",
+				"SHOW_404" => "N",
+				"MESSAGE_404" => "",
+				"PAGER_BASE_LINK" => "",
+				"PAGER_PARAMS_NAME" => "arrPager",
+				"AJAX_OPTION_JUMP" => "N",
+				"AJAX_OPTION_STYLE" => "N",
+				"AJAX_OPTION_HISTORY" => "N",
+				"AJAX_OPTION_ADDITIONAL" => "",
+				"COMPONENT_TEMPLATE" => "services",
+				"CURRENT_ELEMENT" => $arResult['ID']
+			),
+			false
+		);?>
+	</section>
+
+<!-- .page-inner__module закрывается в футере вместо .page-inner__content -->

@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/ml-bono/components/bitrix/news.list/slider/style.css" => "14902645102011","/bitrix/templates/ml-bono/components/bitrix/news.list/services/style.css" => "14902645103197","/bitrix/templates/ml-bono/components/bitrix/news.list/slider-news/style.css" => "14902645102577",), 'CUR_SEL_CNT' => '60', 'CUR_IE_CNT' => '0'); ?>

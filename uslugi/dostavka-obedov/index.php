@@ -4,8 +4,8 @@ $APPLICATION->SetTitle("Доставка обедов");
 ?>
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.detail",
-	"service",
+	"bitrix:news.detail", 
+	"service", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -46,15 +46,19 @@ $APPLICATION->SetTitle("Доставка обедов");
 		"PAGER_TITLE" => "Страница",
 		"PROPERTY_CODE" => array(
 			0 => "ID_FORM",
-			1 => "MENU_IMG",
+			1 => "MENU_CLASS",
 			2 => "MENU_NAME",
 			3 => "MODAL",
-			4 => "MENU",
-			5 => "COLUMN_TEXT_LEFT",
-			6 => "COLUMN_TEXT_RIGHT",
-			7 => "MENU_TEXT",
-			8 => "MENU_LIST",
-			9 => "",
+			4 => "ORDER",
+			5 => "MENU",
+			6 => "PROJECT_NAME",
+			7 => "SCENARIO_NAME",
+			8 => "COLUMN_TEXT_LEFT",
+			9 => "COLUMN_TEXT_RIGHT",
+			10 => "MENU_TEXT",
+			11 => "MENU_LIST",
+			12 => "MENU_IMG",
+			13 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_CANONICAL_URL" => "N",
